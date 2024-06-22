@@ -1,11 +1,11 @@
 
 - src/
-    index.js //server
-    models/
-    controllers/
-    middlewares/
-    services/
-    utils/
-    config/
+    * index.js //server
+    * models/
+    * controllers/
+    * middlewares/
+    * services/
+    * utils/
+    * config/
 - tests/
 
