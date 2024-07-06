@@ -14,7 +14,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Airplane.init({
-    modelNumber:{
+    
+    
+   modelNumber:{
      type:DataTypes.STRING,
      allowNull : false
     },
@@ -26,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     sequelize,
-    modelName: 'Airplane',
+    modelName:'Airplane',
   });
   return Airplane;
 };
