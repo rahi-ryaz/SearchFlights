@@ -14,8 +14,6 @@ class FlightService {
                     throw {error: 'Arrival Time cannot be less than departure time'};
                 }
             const airplane = await this.airplaneRepository.getAirplane(data.airplaneId);
-            console.log(airplane);
-            console.log("flight-Service AirplaneId",)
             const flight= await this.flightrepository.createFlight({
                 ...data, totalSeats:airplane.capacity
             });
@@ -26,10 +24,16 @@ class FlightService {
         }
     }
     
-    
 
-    async getFlightData(){
-         //todo
+
+    async getAllFlightData(data){
+         try{
+            const flights = await this.flightrepository.getAllFlights(data);
+            return flights;
+         }catch(error) {
+            console.log("Something went wrong at service layer");
+            throw {error};
+        }
     }
 }
 
